@@ -1,0 +1,518 @@
+Running IOR write test
+Container rgeorge-ior_n1 does not exist, will create a new one.
+Successfully created container 26f4a56f-f9cd-4abb-8fa6-c1599a5d44c7
+  Container UUID : 26f4a56f-f9cd-4abb-8fa6-c1599a5d44c7
+  Container Label: rgeorge-ior_n1                      
+  Container Type : POSIX                               
+
+Get container properties:
+Properties for container rgeorge-ior_n1
+Name                                             Value                               
+----                                             -----                               
+Highest Allocated OID (alloc_oid)                0                                   
+Checksum (cksum)                                 off                                 
+Checksum Chunk Size (cksum_size)                 32 KiB                              
+Compression (compression)                        off                                 
+Deduplication (dedup)                            off                                 
+Dedupe Threshold (dedup_threshold)               4.0 KiB                             
+EC Cell Size (ec_cell_sz)                        64 KiB                              
+Performance domain affinity level of EC (ec_pda) 1                                   
+Encryption (encryption)                          off                                 
+Global Version (global_version)                  3                                   
+Group (group)                                    users@                              
+Label (label)                                    rgeorge-ior_n1                      
+Layout Type (layout_type)                        POSIX (1)                           
+Layout Version (layout_version)                  1                                   
+Max Snapshot (max_snapshot)                      0                                   
+Object Version (obj_version)                     2                                   
+Owner (owner)                                    rgeorge@                            
+Performance domain level (perf_domain)           root (255)                          
+Redundancy Factor (rd_fac)                       rd_fac1                             
+Redundancy Level (rd_lvl)                        node (2)                            
+Performance domain affinity level of RP (rp_pda) 4294967295                          
+Server Checksumming (srv_cksum)                  off                                 
+Health (status)                                  HEALTHY                             
+Access Control List (acl)                        A::OWNER@:rwdtTaAo, A:G:GROUP@:rwtT 
+Invalid -n/--np value -ppn: trailing characters
+
+Running IOR read-write with transfer size: 16K, RANKS_PER_NODE: 6, total ranks: 6
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16K.csv
+
+Running IOR read-write with transfer size: 1M, RANKS_PER_NODE: 6, total ranks: 6
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-1M.csv
+
+Running IOR read-write with transfer size: 2M, RANKS_PER_NODE: 6, total ranks: 6
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-2M.csv
+
+Running IOR read-write with transfer size: 16M, RANKS_PER_NODE: 6, total ranks: 6
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-6_tx-16M.csv
+
+Running IOR read-write with transfer size: 16K, RANKS_PER_NODE: 8, total ranks: 8
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16K.csv
+
+Running IOR read-write with transfer size: 1M, RANKS_PER_NODE: 8, total ranks: 8
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-1M.csv
+
+Running IOR read-write with transfer size: 2M, RANKS_PER_NODE: 8, total ranks: 8
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-2M.csv
+
+Running IOR read-write with transfer size: 16M, RANKS_PER_NODE: 8, total ranks: 8
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-8_tx-16M.csv
+
+Running IOR read-write with transfer size: 16K, RANKS_PER_NODE: 16, total ranks: 16
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16K.csv
+
+Running IOR read-write with transfer size: 1M, RANKS_PER_NODE: 16, total ranks: 16
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-1M.csv
+
+Running IOR read-write with transfer size: 2M, RANKS_PER_NODE: 16, total ranks: 16
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-2M.csv
+
+Running IOR read-write with transfer size: 16M, RANKS_PER_NODE: 16, total ranks: 16
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-16_tx-16M.csv
+
+Running IOR read-write with transfer size: 16K, RANKS_PER_NODE: 32, total ranks: 32
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16K.csv
+
+Running IOR read-write with transfer size: 1M, RANKS_PER_NODE: 32, total ranks: 32
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-1M.csv
+
+Running IOR read-write with transfer size: 2M, RANKS_PER_NODE: 32, total ranks: 32
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-2M.csv
+
+Running IOR read-write with transfer size: 16M, RANKS_PER_NODE: 32, total ranks: 32
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-32_tx-16M.csv
+
+Running IOR read-write with transfer size: 16K, RANKS_PER_NODE: 48, total ranks: 48
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16K.csv
+
+Running IOR read-write with transfer size: 1M, RANKS_PER_NODE: 48, total ranks: 48
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-1M.csv
+
+Running IOR read-write with transfer size: 2M, RANKS_PER_NODE: 48, total ranks: 48
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-2M.csv
+
+Running IOR read-write with transfer size: 16M, RANKS_PER_NODE: 48, total ranks: 48
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Writing output to ior-results-rw_n-1_seg-32_8340714/rw_n-1_ppn-48_tx-16M.csv
+Successfully destroyed container rgeorge-ior_n1
+Completed script in 2185 seconds
