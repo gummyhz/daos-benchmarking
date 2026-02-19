@@ -2,9 +2,9 @@
 
 # Run this file with "qsub -l select=<node_number>:ncpus=208 <this-script>.qsub"
 
-#PBS -l walltime=02:59:00
+#PBS -l walltime=00:59:00
 #PBS -A e2sar-daos
-#PBS -q prod
+#PBS -q debug-scaling
 #PBS -l filesystems=home:flare:daos_user_fs
 #PBS -j oe
 
