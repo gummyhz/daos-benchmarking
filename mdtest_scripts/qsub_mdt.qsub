@@ -6,217 +6,159 @@
 #PBS -l filesystems=home:flare:daos_user_fs
 #PBS -j oe
 
-# Error handling function
-error() {
-    echo "ERROR: $1" >&2
-    cleanup_on_error
-    exit 1
-}
-
-warning() {
-    echo "WARNING: $1" >&2
-}
-
-cleanup_on_error() {
-    echo "Performing cleanup after error..."
-    if [ -n "$MOUNT_POINT" ] && mountpoint -q "$MOUNT_POINT" 2>/dev/null; then
-        fusermount3 -u "$MOUNT_POINT" 2>/dev/null
-    fi
-    if [ -n "$POOL_NAME" ] && [ -n "$CONTAINER_NAME" ]; then
-        daos cont destroy "$POOL_NAME" "$CONTAINER_NAME" 2>/dev/null
-    fi
-}
-
-# Trap errors
-trap cleanup_on_error ERR
+START_TIME=$SECONDS
 
 # Load DAOS module
 echo "Loading DAOS module..."
-module use /soft/modulefiles/ || { error "Failed to use modulefiles"; }
-module load daos || { error "Failed to load DAOS module"; }
-
-# Add mdtest to PATH
-export PATH=$PATH:$HOME/ior/install/bin
-
-# Verify mdtest is available
-which mdtest || error "mdtest not found in PATH"
-echo "Using mdtest: $(which mdtest)"
+module use /soft/modulefiles/ || { echo "Failed to use modulefiles"; }
+module load daos || { echo "Failed to load DAOS module"; }
 
 # Variables
 POOL_NAME=e2sar
-NNODES=$(wc -l < "$PBS_NODEFILE")
+NNODES=`wc -l < $PBS_NODEFILE`
 CONTAINER_NAME="${USER}-mdtest"
 MOUNT_POINT="/tmp/${POOL_NAME}/${CONTAINER_NAME}"
 
+cd $PBS_O_WORKDIR
 
-# Check if container exists and handle it
-echo "Checking for existing container..."
+# Add ior/mdtest to PATH
+export PATH=$PATH:$HOME/ior/install/bin
+
+# Verify pool exists
+daos pool list | grep -q -- "$POOL_NAME" || { echo "No pool: $POOL_NAME"; exit 1; }
+
+daos pool query "$POOL_NAME"
+
+# Check if container exists
 if daos cont query "$POOL_NAME" "$CONTAINER_NAME" >/dev/null 2>&1; then
     echo "Container $CONTAINER_NAME already exists, destroying it..."
     if ! daos container destroy "$POOL_NAME" "$CONTAINER_NAME"; then
-        error "Failed to destroy existing container $CONTAINER_NAME"
+        echo "Failed to destroy existing container $CONTAINER_NAME"
+        exit 1
     fi
     echo "Old container destroyed successfully."
+else
+    echo "Container $CONTAINER_NAME does not exist, will create a new one."
 fi
-
 # Create new container
-echo "Creating new POSIX container..."
 if ! daos container create --type=POSIX "$POOL_NAME" "$CONTAINER_NAME" --properties=rd_fac:1; then
-    error "Failed to create container $CONTAINER_NAME"
+    echo "Failed to create container $CONTAINER_NAME"
+    exit 1
 fi
 echo "Container created successfully."
 
-# Get container properties
 echo "Container properties:"
 daos container get-prop "$POOL_NAME" "$CONTAINER_NAME"
 
-# Mount container with DFuse
-echo "Mounting container with DFuse..."
-launch-dfuse.sh "$POOL_NAME:$CONTAINER_NAME" || error "Failed to launch DFuse"
-
-# Wait for mount to be ready
-sleep 3
-if ! mountpoint -q "$MOUNT_POINT"; then
-    error "Mount point $MOUNT_POINT is not mounted"
-fi
-echo "DFuse mounted successfully at $MOUNT_POINT"
+# Mount container to /tmp/$POOL_NAME/$CONTAINER_NAME (system default)
+launch-dfuse.sh "$POOL_NAME:$CONTAINER_NAME" || { echo "Failed to mount container"; exit 1; }
+MOUNT_POINT="/tmp/$POOL_NAME/$CONTAINER_NAME"
 
 # Create test directory
-TEST_DIR="${MOUNT_POINT}"
+TEST_DIR="$MOUNT_POINT/mdtest"
+mkdir -p "${TEST_DIR}" || { echo "Failed to create test directory"; exit 1; }
 
 # Create results directory
-RESULTS_DIR="${PBS_O_WORKDIR}/mdtest_results_$(date +%Y%m%d_%H%M%S)"
-mkdir -p "${RESULTS_DIR}" || error "Failed to create results directory"
+RESULTS_DIR="${PBS_O_WORKDIR}/mdtest_results_n-${NNODES}_${PBS_JOBID%%.*}"
+mkdir -p "${RESULTS_DIR}" || { echo "Failed to create results directory"; exit 1; }
 echo "Results will be stored in: $RESULTS_DIR"
 
-# MPI configuration
-RANKS_PER_NODE=12
-NRANKS=$((NNODES * RANKS_PER_NODE))
 
-# Environment variables
+# CPU bindings
 export ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE
 export AFFINITY_ORDERING=compact
-export D_LOG_MASK=ERR
-export D_IL_REPORT=0
-
-# CPU binding for Aurora
+# reccomended binding from docs
 CPU_BINDING1=list:4:9:14:19:20:25:56:61:66:71:74:79
+# skip-1 breadth scan. Bind 48 cores
+CPU_BINDING_SKIP1="list:4:6:56:58:9:11:61:63:12:14:64:66:17:19:69:71:20:22:72:74:25:27:77:79:28:30:80:82:33:35:85:87:36:38:88:90:41:43:93:95:44:46:96:98:49:51:100:102"
+# bind all available cores
+CPU_BINDING_ALL="list:1:53:2:54:3:55:4:56:5:57:6:58:7:59:8:60:9:61:10:62:11:63:12:64:13:65:14:66:15:67:16:68:17:69:18:70:19:71:20:72:21:73:22:74:23:75:24:76:25:77:26:78:27:79:28:80:29:81:30:82:31:83:32:84:33:85:34:86:35:87:36:88:37:89:38:90:39:91:40:92:41:93:42:94:43:95:44:96:45:97:46:98:47:99:48:100:49:101:50:102:51:103"
 
-# MDTest parameters (similar to mdtest-hard)
-N_FILES=1000           # Number of files per process
-FILES_PER_DIR=5          # Files per directory (hard mode)
-WRITE_BYTES=3901         # Bytes per file
+# CPU binding test cases (bind noskip used for many process test, skip1 used for 48)
+CPU_BINDS=("$CPU_BINDING_SKIP1" "$CPU_BINDING_ALL")
+NUM_PROCS=( 48 102 )
 
+# Run MDTest with DFS API
+# -a : api
+# -b : [1] branching factor
+# -d : [workind dir] directory for tests
+# -F : [off] files only (no dirs)
+# -i : [1] iterations
+# -n : [0] number of iterms per process (dirs and files)
+# -u : [off] unique working dir for each task
+# -w : [0] bytes to write per file after creation
+# -z : [0] tree depth
 
-# Run MDTest with DFS API (direct DAOS access)
-echo "================================================"
-echo "Running MDTest - CREATE (Write)"
-echo "================================================"
-echo "Start time: $(date)"
+# Parameter cases:
+NUM_FILES=( 100000 1000000 10000000 100000000 1000000000 ) 
+DEPTHS=( 4 5 6 7 8 )
+BRANCHING_FACTORS=( 4 5 6 7 8 )
+ITERATIONS=2
 
-LD_PRELOAD=/usr/lib64/libpil4dfs.so \
-    mpiexec -np ${NRANKS} -ppn ${RANKS_PER_NODE} \
-    --cpu-bind ${CPU_BINDING1} \
-    --env LD_PRELOAD=/usr/lib64/libpil4dfs.so \
-    --env D_LOG_MASK=ERR \
-    mdtest -a POSIX \
-    -n ${N_FILES} \
-    -i 1 \
-    -d ${TEST_DIR}/create \
-    -w ${WRITE_BYTES} \
-    -e ${FILES_PER_DIR} \
-    -u \
-    | tee "${RESULTS_DIR}/mdtest_create.log"
+echo "Start of mdtest cases"
+for ((cpu_np=0; cpu_np<${#CPU_BINDS[@]}; cpu_np++)); do 
 
-echo "End time: $(date)"
+    # file number sensitivity
+    for unique in "-u" ""; do
+        for nfiles in "${NUM_FILES[@]}"; do 
+            LD_PRELOAD=/usr/lib64/libpil4dfs.so mpiexec \
+                -np "${NUM_PROCS[$cpu_np]}" -ppn "${NUM_PROCS[$cpu_np]}" \
+                --cpu-bind "${CPU_BINDS[$cpu_np]}" --no-vni -genvall -- \
+                mdtest -a DFS -d ${TEST_DIR} -i ${ITERATIONS} \
+                -n ${nfiles} ${unique} -F -w 1024 \
+                --dfs.pool ${POOL_NAME} --dfs.cont ${CONTAINER_NAME}
+            
+            # cleanup
+            sleep 3 
+            rm -rf "${TEST_DIR}/"
+        done
+    done
 
-echo "================================================"
-echo "Running MDTest - READ"
-echo "================================================"
-echo "Start time: $(date)"
+    # depth sensitivity
+    for unique in "-u" ""; do
+        for depth in "${DEPTHS[@]}"; do 
+            LD_PRELOAD=/usr/lib64/libpil4dfs.so mpiexec \
+                -np "${NUM_PROCS[$cpu_np]}" -ppn "${NUM_PROCS[$cpu_np]}" \
+                --cpu-bind "${CPU_BINDS[$cpu_np]}" --no-vni -genvall -- \
+                mdtest -a DFS -d ${TEST_DIR} -i ${ITERATIONS} \
+                -b 4 -I 10 -z ${depth} ${unique} \
+                --dfs.pool ${POOL_NAME} --dfs.cont ${CONTAINER_NAME}
 
-LD_PRELOAD=/usr/lib64/libpil4dfs.so \
-    mpiexec -np ${NRANKS} -ppn ${RANKS_PER_NODE} \
-    --cpu-bind ${CPU_BINDING1} \
-    --env LD_PRELOAD=/usr/lib64/libpil4dfs.so \
-    --env D_LOG_MASK=ERR \
-    mdtest -a POSIX \
-    -n ${N_FILES} \
-    -i 1 \
-    -d ${TEST_DIR}/read \
-    -E \
-    -w ${WRITE_BYTES} \
-    -e ${FILES_PER_DIR} \
-    -u \
-    | tee "${RESULTS_DIR}/mdtest_read.log"
+            # cleanup
+            sleep 3 
+            rm -rf "${TEST_DIR}/"
+        done
+    done
 
-echo "End time: $(date)"
+    # branching sensitivity
+    for unique in "-u" ""; do
+        for branching in "${BRANCHING_FACTORS[@]}"; do 
+            LD_PRELOAD=/usr/lib64/libpil4dfs.so mpiexec \
+                -np "${NUM_PROCS[$cpu_np]}" -ppn "${NUM_PROCS[$cpu_np]}" \
+                --cpu-bind "${CPU_BINDS[$cpu_np]}" --no-vni -genvall -- \
+                mdtest -a DFS -d ${TEST_DIR} -i ${ITERATIONS} \
+                 -z 4 -I 10 -b ${branching} ${unique} \
+                --dfs.pool ${POOL_NAME} --dfs.cont ${CONTAINER_NAME}
 
-echo "================================================"
-echo "Running MDTest - DELETE"
-echo "================================================"
-echo "Start time: $(date)"
+            # cleanup
+            sleep 3 
+            rm -rf "${TEST_DIR}/"
+        done
+    done
 
-LD_PRELOAD=/usr/lib64/libpil4dfs.so \
-    mpiexec -np ${NRANKS} -ppn ${RANKS_PER_NODE} \
-    --cpu-bind ${CPU_BINDING1} \
-    --env LD_PRELOAD=/usr/lib64/libpil4dfs.so \
-    --env D_LOG_MASK=ERR \
-    mdtest -a POSIX \
-    -n ${N_FILES} \
-    -i 1 \
-    -d ${TEST_DIR}/delete \
-    -r \
-    -e ${FILES_PER_DIR} \
-    -u \
-    | tee "${RESULTS_DIR}/mdtest_delete.log"
+done
+echo "End of mdtest cases"
 
-echo "End time: $(date)"
-
-echo "================================================"
-echo "MDTest Benchmarks Completed"
-echo "================================================"
-
-# Display summary
-echo "================================================"
-echo "Results Summary"
-echo "================================================"
-echo "Results directory: $RESULTS_DIR"
-echo ""
-echo "CREATE performance:"
-grep "File creation" "${RESULTS_DIR}/mdtest_create.log" | tail -1
-echo ""
-echo ""
-echo "READ performance:"
-grep "File read" "${RESULTS_DIR}/mdtest_read.log" | tail -1
-echo ""
-echo "DELETE performance:"
-grep "File removal" "${RESULTS_DIR}/mdtest_delete.log" | tail -1
-echo "================================================"
-
-# Cleanup
-echo "================================================"
-echo "Cleanup"
-echo "================================================"
-
-# Unmount DFuse
-echo "Unmounting DFuse..."
-if mountpoint -q "$MOUNT_POINT"; then
-    fusermount3 -u "$MOUNT_POINT" || warning "Failed to unmount $MOUNT_POINT"
-    sleep 2
-fi
-
-# Remove mount point directory
-if [ -d "$MOUNT_POINT" ]; then
-    rmdir "$MOUNT_POINT" 2>/dev/null || warning "Failed to remove directory $MOUNT_POINT"
-fi
+# Remove mounting point on a compute node
+# clean-dfuse.sh $pool_name:$container_name || echo "clean-dfuse.sh failed"
+fusermount3 -u "$MOUNT_POINT" || echo "Failed to unmount $MOUNT_POINT"
+sleep 2
 
 # Destroy container
-echo "Destroying container..."
-daos cont destroy "$POOL_NAME" "$CONTAINER_NAME" || warning "Failed to destroy container $CONTAINER_NAME"
+daos container destroy "$POOL_NAME" "$CONTAINER_NAME" || echo "Failed to destroy container $CONTAINER_NAME"
 
-echo "================================================"
-echo "Cleanup completed"
-echo "================================================"
+# Output log of existing pools
+daos container list "$POOL_NAME"
 
-exit 0
+ELAPSED_TIME=$((SECONDS - START_TIME))
+echo "Completed script in $ELAPSED_TIME seconds"
