@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.3.20)  26 MAR 2026 07:55
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.3.20)  26 MAR 2026 13:59
  system commands enabled.
  file:line:error style messages enabled.
 **/home/gummyhz/Documents/daos-benchmarking/poster/main.tex
@@ -1036,26 +1036,26 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
 (./main.aux)
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1110,7 +1110,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 87.
+Package hyperref Info: Link coloring OFF on input line 92.
  (./main.out) (./main.out)
 \@outlinefile=\write6
 
@@ -1128,8 +1128,8 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (/usr/share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \microtypecontext on input line 87.
-LaTeX Info: Redefining \microtypesetup on input line 87.
+LaTeX Info: Redefining \microtypecontext on input line 92.
+LaTeX Info: Redefining \microtypesetup on input line 92.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1159,7 +1159,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Aleo' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 87.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 92.
  (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
@@ -1169,54 +1169,54 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 87.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 92.
  (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 87.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 92.
  (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 87.
+(Font)              <6> on input line 92.
  (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Calculating math sizes for size <35.83> on input line 87.
+LaTeX Font Info:    Calculating math sizes for size <35.83> on input line 92.
 <logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png, id=19, 650.6709pt x 256.5585pt>
 File: logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png Graphic file (type png)
 <use logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png>
-Package luatex.def Info: logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png  used on input line 99.
+Package luatex.def Info: logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png  used on input line 104.
 (luatex.def)             Requested size: 360.80891pt x 142.26378pt.
 <logos/JLab_Logo_RGB_Red_White_Horizontal.png, id=20, 345.6915pt x 135.3858pt>
 File: logos/JLab_Logo_RGB_Red_White_Horizontal.png Graphic file (type png)
 <use logos/JLab_Logo_RGB_Red_White_Horizontal.png>
-Package luatex.def Info: logos/JLab_Logo_RGB_Red_White_Horizontal.png  used on input line 99.
+Package luatex.def Info: logos/JLab_Logo_RGB_Red_White_Horizontal.png  used on input line 104.
 (luatex.def)             Requested size: 581.2483pt x 227.62204pt.
 
 \openout4 = main.vrb
 File: logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png Graphic file (type png)
 <use logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png>
-Package luatex.def Info: logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png  used on input line 377.
+Package luatex.def Info: logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png  used on input line 388.
 (luatex.def)             Requested size: 360.80891pt x 142.26378pt.
 File: logos/JLab_Logo_RGB_Red_White_Horizontal.png Graphic file (type png)
 <use logos/JLab_Logo_RGB_Red_White_Horizontal.png>
-Package luatex.def Info: logos/JLab_Logo_RGB_Red_White_Horizontal.png  used on input line 377.
+Package luatex.def Info: logos/JLab_Logo_RGB_Red_White_Horizontal.png  used on input line 388.
 (luatex.def)             Requested size: 581.2483pt x 227.62204pt.
  (./main.vrb
-<diagrams/data_heirarchy.pdf, id=22, 484.05844pt x 304.88907pt>
+<diagrams/data_heirarchy.pdf, id=22, 566.115pt x 283.81032pt>
 File: diagrams/data_heirarchy.pdf Graphic file (type pdf)
 <use diagrams/data_heirarchy.pdf>
 Package luatex.def Info: diagrams/data_heirarchy.pdf  used on input line 27.
-(luatex.def)             Requested size: 910.61124pt x 573.62418pt.
+(luatex.def)             Requested size: 910.61124pt x 456.55688pt.
 <diagrams/daos_arch.pdf, id=25, 594.30032pt x 280.1667pt>
 File: diagrams/daos_arch.pdf Graphic file (type pdf)
 <use diagrams/daos_arch.pdf>
 Package luatex.def Info: diagrams/daos_arch.pdf  used on input line 47.
 (luatex.def)             Requested size: 1040.69856pt x 490.64534pt.
-Package svg Info: Last page of `./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf' is 1 on input line 100.
+Package svg Info: Last page of `./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf' is 1 on input line 150.
  (./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf_tex
 <./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf, id=29, page=1, 1136.19978pt x 502.95465pt>
 File: ./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf Graphic file (type pdf)
@@ -1260,19 +1260,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Underfull \hbox (badness 1418) in paragraph at lines 9--12
-[]\TU/Lato(1)/m/n/17.28 Ar-gonne Na-tional Lab.  Daos - alcf user guides, 2025.  URL []$\TU/lmtt/m/n/17.28 https://docs.alcf.anl.gov/aurora/data-[]management/daos/
- []
-
 ))
 File: logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png Graphic file (type png)
 <use logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png>
-Package luatex.def Info: logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png  used on input line 377.
+Package luatex.def Info: logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png  used on input line 388.
 (luatex.def)             Requested size: 360.80891pt x 142.26378pt.
 File: logos/JLab_Logo_RGB_Red_White_Horizontal.png Graphic file (type png)
 <use logos/JLab_Logo_RGB_Red_White_Horizontal.png>
-Package luatex.def Info: logos/JLab_Logo_RGB_Red_White_Horizontal.png  used on input line 377.
+Package luatex.def Info: logos/JLab_Logo_RGB_Red_White_Horizontal.png  used on input line 388.
 (luatex.def)             Requested size: 581.2483pt x 227.62204pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1296,19 +1291,19 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45782 strings out of 476076
- 305230,1648299 words of node,token memory allocated
- 67956 words of node memory still in use:
-   579 hlist, 63 vlist, 180 rule, 296 disc, 101 local_par, 24 math, 2033 glue, 787 kern, 323 penalty, 28 margin_kern, 4080 glyph, 1444 attribute, 84 glue_spec, 1444 attribute_list, 21 write, 1 save_pos, 194 pdf_literal, 4 pdf_start_link, 4 pdf_end_link, 10 pdf_dest, 4 pdf_action, 392 pdf_colorstack, 9 pdf_setmatrix, 9 pdf_save, 9 pdf_restore nodes
-   avail lists: 2:566,3:1734,4:1432,5:2406,6:313,7:18861,8:68,9:2673,10:21,11:905
- 66828 multiletter control sequences out of 65536+600000
+ 45776 strings out of 476076
+ 305237,1648299 words of node,token memory allocated
+ 69891 words of node memory still in use:
+   573 hlist, 63 vlist, 180 rule, 324 disc, 100 local_par, 22 math, 2041 glue, 832 kern, 308 penalty, 27 margin_kern, 4304 glyph, 1428 attribute, 84 glue_spec, 1428 attribute_list, 21 write, 1 save_pos, 194 pdf_literal, 3 pdf_start_link, 3 pdf_end_link, 9 pdf_dest, 3 pdf_action, 390 pdf_colorstack, 9 pdf_setmatrix, 9 pdf_save, 9 pdf_restore nodes
+   avail lists: 2:566,3:1684,4:1423,5:2541,6:310,7:19521,8:28,9:2647,10:21,11:989
+ 66823 multiletter control sequences out of 65536+600000
  124 fonts using 18141983 bytes
  101i,20n,115p,773b,1354s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/fonts/TTF/Lato-Regular.ttf></usr/share/fonts/TTF/Lato-Light.ttf></usr/local/share/fonts/Aleo/Aleo-VariableFont_wght.ttf></usr/local/share/fonts/Aleo/Aleo-Bold.ttf>
-Output written on main.pdf (1 page, 622797 bytes).
+</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/fonts/TTF/Lato-Regular.ttf></usr/share/fonts/TTF/Lato-Light.ttf></usr/local/share/fonts/Aleo/Aleo-VariableFont_wght.ttf></usr/local/share/fonts/Aleo/Aleo-Bold.ttf></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on main.pdf (1 page, 743915 bytes).
 
-PDF statistics: 1046 PDF objects out of 1200 (max. 8388607)
- 673 compressed objects within 7 object streams
- 13 named destinations out of 1000 (max. 1048576)
+PDF statistics: 1048 PDF objects out of 1200 (max. 8388607)
+ 674 compressed objects within 7 object streams
+ 12 named destinations out of 1000 (max. 1048576)
  24 words of extra memory for PDF output out of 10000 (max. 100000000)
 

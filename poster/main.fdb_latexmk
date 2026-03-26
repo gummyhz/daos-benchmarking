@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1774526117.81159 "main.aux" "main.bbl" "main" 1774526137.75042 0
-  "./poster.bib" 1774409342.61896 635 0f2c6fe0a31d2e1182bc657e3211ce5d ""
+["bibtex main"] 1774547947.10396 "main.aux" "main.bbl" "main" 1774547953.63009 0
+  "./poster.bib" 1774547939.57399 400 cffe54823deaea9f9fdfbafc5654fa2c ""
   "/usr/share/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1772820570 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1774526137.148 2483 7041929a8a5d54cd1aa45c4a58e6e79e "lualatex"
+  "main.aux" 1774547953.04399 2438 ec3fc756a414e22d4e1050a8aa328140 "lualatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["lualatex"] 1774526131.17256 "/home/gummyhz/Documents/daos-benchmarking/poster/main.tex" "main.pdf" "main" 1774526137.75087 0
+["lualatex"] 1774547947.15499 "/home/gummyhz/Documents/daos-benchmarking/poster/main.tex" "main.pdf" "main" 1774547953.63049 0
   "/home/gummyhz/.texlive/texmf-var/luatex-cache/generic/fonts/otl/aleo-bold.luc" 1772732862.035 114187 a0f5000af339d03a3d3d622036aba4a5 ""
   "/home/gummyhz/.texlive/texmf-var/luatex-cache/generic/fonts/otl/aleo-bolditalic.luc" 1772732861.994 117518 4d1d12f400a6507acadf621a678e71f5 ""
   "/home/gummyhz/.texlive/texmf-var/luatex-cache/generic/fonts/otl/aleo-italic.luc" 1772732862.077 116846 8557df379fe00699bfe2b706b94a35ea ""
@@ -25,7 +25,7 @@
   "/home/gummyhz/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmsans17-regular.luc" 1774008799.28699 127849 baf08b301463370364243423d6f720b5 ""
   "/home/gummyhz/.texlive/texmf-var/luatex-cache/generic/fonts/streams/aleoboldttf-1.luc" 1772733018.715 111642 8335a4fd23f26c70a40fda9f7827ed6e ""
   "/home/gummyhz/.texlive/texmf-var/luatex-cache/generic/fonts/streams/aleovariablefontwghtttf-1.luc" 1772733018.606 111720 95c3f088e571dcfe414b07f46d2779b5 ""
-  "/home/gummyhz/Documents/daos-benchmarking/poster/main.tex" 1774526130.76691 15022 dbd4684803adbe0e8c6d69f5020af976 ""
+  "/home/gummyhz/Documents/daos-benchmarking/poster/main.tex" 1774547873.31791 15620 92a0b8b6f7273e7304da31a0a466b743 ""
   "/usr/local/share/fonts/Aleo/Aleo-Bold.ttf" 1772729801.43682 72628 0107871af1ff3028ca6c7dfb9a70f8f4 ""
   "/usr/local/share/fonts/Aleo/Aleo-VariableFont_wght.ttf" 1772729771.96324 146636 b97c17b8b91433da9fd9bc425b8ceae8 ""
   "/usr/share/fonts/TTF/Lato-Light.ttf" 1720269962 644556 90e1d3559ac52f7f0f77a86e1bfd632d ""
@@ -53,6 +53,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm" 1772820570 11948 fa976674f030491ad35532a8a1e37325 ""
   "/usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm" 1772820570 11836 e3b6ce3e601aec94f64a536e7f4224d5 ""
   "/usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm" 1772820570 11864 309fd7f43e4a0ba39f6f7644d76e8edf ""
+  "/usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb" 1772820570 27863 09ce3735688ffde955e72da27c95b61a ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1772820570 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1772820570 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/share/texmf-dist/tex/generic/bitset/bitset.sty" 1772820570 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -388,15 +389,15 @@
   "beamercolorthemewm.sty" 1772743409.27499 2200 6e5f1c8c22903cbaf8c65e3c8eeae4f3 ""
   "beamerthemegemini.sty" 1774487629.91096 6710 4e8bcd2a065224abdf6b1ada500201a3 ""
   "diagrams/daos_arch.pdf" 1774383468.17026 84732 36e6bdf5158c8de99dc3171ef88b3d97 ""
-  "diagrams/data_heirarchy.pdf" 1774494268.76694 76993 99ed14f7a24260eec764eb04071995ec ""
+  "diagrams/data_heirarchy.pdf" 1774547132.65372 196060 bbf20f9280bcbfc0a9ffe7b0675cf30f ""
   "logos/All Primary Logos/Stacked/PNG/WM_Logo_Stacked_White_Gold.png" 1762968959 87275 231e60f5cafa2408d72f5ae43dd8dc0b ""
   "logos/JLab_Logo_RGB_Red_White_Horizontal.png" 1772744138.53898 26202 ce4a747fa34fae4b82350f59b2498d60 ""
-  "main.aux" 1774526137.148 2483 7041929a8a5d54cd1aa45c4a58e6e79e "lualatex"
-  "main.bbl" 1774526117.855 830 0d31afbad9903a7687b2dd4c35ba9458 "bibtex main"
-  "main.nav" 1774526137.15 485 8ad38786aae60a3e64b30504fae6b5b9 "lualatex"
-  "main.out" 1774526137.149 93 aea4b6a8ae45636c75679c2f0dfa4493 "lualatex"
-  "main.tex" 1774526130.76691 15022 dbd4684803adbe0e8c6d69f5020af976 ""
-  "main.vrb" 1774526135.538 11972 75d94d057b3fd549aad88fec8d478ca3 "lualatex"
+  "main.aux" 1774547953.04399 2438 ec3fc756a414e22d4e1050a8aa328140 "lualatex"
+  "main.bbl" 1774547947.14099 603 2fb1b92b13cae118c090223bbde3a885 "bibtex main"
+  "main.nav" 1774547953.04599 485 8ad38786aae60a3e64b30504fae6b5b9 "lualatex"
+  "main.out" 1774547953.04499 93 aea4b6a8ae45636c75679c2f0dfa4493 "lualatex"
+  "main.tex" 1774547873.31791 15620 92a0b8b6f7273e7304da31a0a466b743 ""
+  "main.vrb" 1774547951.46499 12414 ed027b7e755163ed7e848dc3582f71f7 "lualatex"
   "svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf" 1774279856.177 90204 28b8a5b3bc0697e24410737d12f4a4f4 ""
   "svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf_tex" 1774279856.17883 2135 04bbcc4e4139895602bf06323027f187 ""
   "svg-inkscape/ior_bw-vs-tasks_hue-nodes-2M_svg-tex.pdf" 1774200471.46695 81691 80adbf918e3f3c00556dcdb510f1efdc ""

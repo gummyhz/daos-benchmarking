@@ -445,16 +445,16 @@ INPUT ./diagrams/data_heirarchy.pdf
 INPUT ./diagrams/data_heirarchy.pdf
 INPUT ./diagrams/daos_arch.pdf
 INPUT ./diagrams/daos_arch.pdf
-INPUT ./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf
-INPUT ./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf_tex
-INPUT ./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf
-INPUT ./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT ./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf
+INPUT ./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf_tex
+INPUT ./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf
+INPUT ./svg-inkscape/fio_bw_vs_bs_hueRW_nj-16_iod-16_svg-tex.pdf
 INPUT ./svg-inkscape/ior_latency_svg-tex.pdf
 INPUT ./svg-inkscape/ior_latency_svg-tex.pdf_tex
 INPUT ./svg-inkscape/ior_latency_svg-tex.pdf
@@ -488,3 +488,4 @@ OUTPUT main.snm
 INPUT ./main.aux
 INPUT /home/gummyhz/.texlive/texmf-var/luatex-cache/generic/fonts/streams/aleovariablefontwghtttf-1.luc
 INPUT /home/gummyhz/.texlive/texmf-var/luatex-cache/generic/fonts/streams/aleoboldttf-1.luc
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb

@@ -6,6 +6,11 @@
 % COMPILE WITH: latexmk -lualatex --shell-escape main.tex
 % TO CHANGE SVG TO PDF (when svg is made by draw.io and inkscape gets angry): rsvg-convert -f pdf -o data_heirarchy.pdf data_heirarchy.svg
 
+% MOVE ACKNOWLEDMENTS BACK TO THE  RIGHT
+%  FIX THE REFS TO BE ONE LINES
+% WHAT IS FIO WHAT IS IOR 
+% CHANGE FIRST FIGURE
+% ADD CONCLUSION AND FUTURE WORK 
 \documentclass[final]{beamer}
 
 % ====================
@@ -144,7 +149,7 @@
       \centering
         \includegraphics[width=\colwidth]{diagrams/daos_arch.pdf}
         \label{fig:posix}
-      \caption{DAOS storage system architecture \cite{xmei_sc24}}
+      \caption{DAOS client, storage, and administrative node communication. \cite{xmei_sc24} Applications on client nodes send data to/from DAOS storage nodes. Administrators may use the dmg tool and management API to communicate with the DAOS server (storage-side) and agent (client-side).}
     \end{figure}
     
 
@@ -165,20 +170,7 @@
     \end{itemize}
   \end{block}
 
-  \begin{block}{Acknowledgments}
-  This research used resources of the Argonne Leadership Computing Facility, 
-  which is a U.S. Department of Energy Office of Science User Facility 
-  operated under contract DE-AC02-06CH11357. This work was supported by NSF OAC-2348350.
-  \end{block}
- 
-\end{column}
-
-\separatorcolumn
-
-\begin{column}{\colwidth}
-
-
-  \begin{block}{Benchmarking}
+    \begin{block}{Benchmarking}
     We evaluated this storage system using the fio, IOR, mdtest, and IO500 I/O benchmarks. 
     We aim to characterize the I/O and metadata performance bottlenecks under a 
     variety of access patterns and client configurations on a production scale system.
@@ -189,7 +181,70 @@
     
   \end{block}
 
-  \begin{block}{fio Bandwidth}
+ 
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+
+
+
+    \begin{block}{IO500}
+      \par\medskip
+    {IO500 is a standard high-performance computing benchmarking suite, evaluating both I/O (IOR) and metadata (mdtest) operations.}
+     \par\medskip
+    \renewcommand{\arraystretch}{1.4}
+    \setlength{\tabcolsep}{15pt}
+    \begin{minipage}[t]{0.48\colwidth}
+      \centering
+      {\small
+      \begin{tabular}{|c|r|r|}
+        \hline
+        Test & \multicolumn{1}{c|}{DFS API} & \multicolumn{1}{c|}{POSIX API} \\
+        \hline \hline
+        ior-easy-write & 92.2 GiB/s & 81.3 GiB/s \\
+        ior-easy-read & 212.6 GiB/s & 10.8 GiB/s \\
+        ior-hard-write & 3.8 GiB/s & 0.7 GiB/s \\
+        ior-hard-read & 15.3 GiB/s & 3.2 GiB/s \\
+        \hline
+        Bandwidth Score & 32.6 GiB/s & 6.5 GiB/s \\
+        \hline
+      \end{tabular}
+      \captionof{table}{8 node IO500 bandwidth}
+      }
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\colwidth}
+      \centering
+      {\small 
+      \begin{tabular}{|c|r|r|}
+        \hline
+        Test & \multicolumn{1}{c|}{DFS API} & \multicolumn{1}{c|}{POSIX API} \\
+        \hline \hline
+        find & 775.6 kIOPS & 1.6 kIOPS \\
+        mdtest-easy-write & 219.4 kIOPS & 4.0 kIOPS \\
+        mdtest-hard-write & 60.6 kIOPS & 1.1 kIOPS \\
+        mdtest-hard-read & 807.3 kIOPS & 3.9 kIOPS \\
+        mdtest-easy-stat & 1112.2 kIOPS & 4.0 kIOPS \\
+        mdtest-hard-stat & 1098.3 kIOPS & 3.9 kIOPS \\
+        mdtest-easy-delete & 301.0 kIOPS & 3.4 kIOPS \\
+        mdtest-hard-delete & 302.6 kIOPS & 0.4 kIOPS \\
+        \hline
+        IOPS Score & 417.7 kIOPS  & 2.2 kIOPS \\
+        \hline
+      \end{tabular}
+      \captionof{table}{8 node IO500 IOPS} 
+      % rounded to 1 decimal point
+      }
+    \end{minipage}
+    \par\medskip
+    {{\normalsize{\textbf{DFS API achieved \approx5x higher bandwidths and \approx190x higher IOPS than POSIX API on a DFuse mounted POSIX container, making major improvements to metadata and reading operations}}}}
+    
+  \end{block}
+
+  \begin{block}{DFuse POSIX Bandwidth}
 
     
     
@@ -237,56 +292,6 @@
     
   \end{block}
 
-  \begin{block}{IO500}
-    ~\\
-    \renewcommand{\arraystretch}{1.4}
-    \setlength{\tabcolsep}{15pt}
-    \begin{minipage}[t]{0.48\colwidth}
-      \centering
-      {\small
-      \begin{tabular}{|c|r|r|}
-        \hline
-        Test & \multicolumn{1}{c|}{DFS API} & \multicolumn{1}{c|}{POSIX API} \\
-        \hline \hline
-        ior-easy-write & 92.2 GiB/s & 81.3 GiB/s \\
-        ior-easy-read & 212.6 GiB/s & 10.8 GiB/s \\
-        ior-hard-write & 3.8 GiB/s & 0.7 GiB/s \\
-        ior-hard-read & 15.3 GiB/s & 3.2 GiB/s \\
-        \hline
-        Bandwidth Score & 32.6 GiB/s & 6.5 GiB/s \\
-        \hline
-      \end{tabular}
-      \captionof{table}{8 node IO500 bandwidth}
-      }
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.48\colwidth}
-      \centering
-      {\small 
-      \begin{tabular}{|c|r|r|}
-        \hline
-        Test & \multicolumn{1}{c|}{DFS API} & \multicolumn{1}{c|}{POSIX API} \\
-        \hline \hline
-        find & 775.6 kIOPS & 1.6 kIOPS \\
-        mdtest-easy-write & 219.4 kIOPS & 4.0 kIOPS \\
-        mdtest-hard-write & 60.6 kIOPS & 1.1 kIOPS \\
-        mdtest-hard-read & 807.3 kIOPS & 3.9 kIOPS \\
-        mdtest-easy-stat & 1112.2 kIOPS & 4.0 kIOPS \\
-        mdtest-hard-stat & 1098.3 kIOPS & 3.9 kIOPS \\
-        mdtest-easy-delete & 301.0 kIOPS & 3.4 kIOPS \\
-        mdtest-hard-delete & 302.6 kIOPS & 0.4 kIOPS \\
-        \hline
-        IOPS Score & 417.7 kIOPS  & 2.2 kIOPS \\
-        \hline
-      \end{tabular}
-      \captionof{table}{8 node IO500 IOPS} 
-      % rounded to 1 decimal point
-      }
-    \end{minipage}
-    \par\medskip
-    {{\normalsize{\textbf{DFS achieved \~5x higher bandwidths and \~190x higher IOPS than POSIX on a DFuse mount, making major improvements to metadata and reading operations}}}}
-    
-  \end{block}
 
   \begin{block}{IOR Latency}
     \begin{figure} 
@@ -360,6 +365,12 @@
     % than write bandwidths.
     
  
+  \end{block}
+
+    \begin{block}{Acknowledgments}
+  This research used resources of the Argonne Leadership Computing Facility, 
+  which is a U.S. Department of Energy Office of Science User Facility 
+  operated under contract DE-AC02-06CH11357. This work was supported by NSF OAC-2348350.
   \end{block}
   
 
