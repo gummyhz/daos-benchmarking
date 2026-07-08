@@ -1,0 +1,305 @@
+Loading DAOS module...
+Pool 33501c2e-2721-4811-adbb-118f78785224, ntarget=4032, disabled=0, leader=217, version=470, state=Ready
+Pool health info:
+- Rebuild done, 0 objs, 0 recs
+Pool space info:
+- Target(VOS) count:4032
+- Storage tier 0 (SCM):
+  Total size: 3.0 TB
+  Free: 2.6 TB, min:653 MB, max:654 MB, mean:654 MB
+- Storage tier 1 (NVMe):
+  Total size: 97 TB
+  Free: 83 TB, min:20 GB, max:21 GB, mean:21 GB
+Results will be stored in: /home/rgeorge/daos-benchmarking/mdtest_scripts/mdtest_results_n-1_8649586
+Start of mdtest cases
+Make container
+UUID                                 Label           
+----                                 -----           
+b7e9e607-0909-4456-ba0c-87443714631b fio-1tib-fs16g  
+299132a4-91a0-46ba-beae-4e96723b6242 fio-10tib-fs16g 
+Container rgeorge-mdtest-smoke does not exist, will create a new one.
+Successfully created container 55705fdf-8d6b-4125-ac82-57a7edf36de5
+  Container UUID : 55705fdf-8d6b-4125-ac82-57a7edf36de5
+  Container Label: rgeorge-mdtest-smoke                
+  Container Type : POSIX                               
+
+Container created successfully.
+Container properties:
+Properties for container rgeorge-mdtest-smoke
+Name                                             Value                               
+----                                             -----                               
+Highest Allocated OID (alloc_oid)                0                                   
+Checksum (cksum)                                 off                                 
+Checksum Chunk Size (cksum_size)                 32 KiB                              
+Compression (compression)                        off                                 
+Deduplication (dedup)                            off                                 
+Dedupe Threshold (dedup_threshold)               4.0 KiB                             
+EC Cell Size (ec_cell_sz)                        64 KiB                              
+Performance domain affinity level of EC (ec_pda) 1                                   
+Encryption (encryption)                          off                                 
+Global Version (global_version)                  3                                   
+Group (group)                                    users@                              
+Label (label)                                    rgeorge-mdtest-smoke                
+Layout Type (layout_type)                        POSIX (1)                           
+Layout Version (layout_version)                  1                                   
+Max Snapshot (max_snapshot)                      0                                   
+Object Version (obj_version)                     2                                   
+Owner (owner)                                    rgeorge@                            
+Performance domain level (perf_domain)           root (255)                          
+Redundancy Factor (rd_fac)                       rd_fac1                             
+Redundancy Level (rd_lvl)                        node (2)                            
+Performance domain affinity level of RP (rp_pda) 4294967295                          
+Server Checksumming (srv_cksum)                  off                                 
+Health (status)                                  HEALTHY                             
+Access Control List (acl)                        A::OWNER@:rwdtTaAo, A:G:GROUP@:rwtT 
+-- started at 07/07/2026 12:39:27 --
+
+mdtest-4.0.0 was launched with 48 total task(s) on 1 node(s)
+Command line used: /home/rgeorge/ior/install/bin/mdtest '-a' 'DFS' '-d' '/mdtest' '-i' '2' '-b' '4' '-I' '10' '-z' '4' '-u' '--dfs.pool' 'e2sar' '--dfs.cont' 'rgeorge-mdtest-smoke'
+WARNING: Read bytes is 0, thus, a read test will actually just open/close
+Path                : /mdtest
+FS                  : 90.9 TiB   Used FS: 14.1%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+Nodemap: 111111111111111111111111111111111111111111111111
+48 tasks, 163680 files/directories
+
+SUMMARY rate: (of 2 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   Directory creation         326737.888     309371.297     318054.592      12280.034
+   Directory stat             358020.146     313844.561     335932.353      31236.856
+   Directory rename           147370.494     141418.457     144394.476       4208.726
+   Directory removal          121966.757     115478.803     118722.780       4587.676
+   File creation               25455.851      25119.571      25287.711        237.786
+   File stat                   13325.338      13027.079      13176.208        210.901
+   File read                   25859.274      25846.195      25852.735          9.249
+   File removal                 2007.622       2002.613       2005.118          3.542
+   Tree creation                4283.658       3322.611       3803.134        679.563
+   Tree removal                 2278.591       2276.810       2277.700          1.259
+-- finished at 07/07/2026 12:43:10 --
+
+Remove container
+UUID                                 Label                
+----                                 -----                
+55705fdf-8d6b-4125-ac82-57a7edf36de5 rgeorge-mdtest-smoke 
+b7e9e607-0909-4456-ba0c-87443714631b fio-1tib-fs16g       
+299132a4-91a0-46ba-beae-4e96723b6242 fio-10tib-fs16g      
+Successfully destroyed container rgeorge-mdtest-smoke
+Make container
+UUID                                 Label           
+----                                 -----           
+b7e9e607-0909-4456-ba0c-87443714631b fio-1tib-fs16g  
+299132a4-91a0-46ba-beae-4e96723b6242 fio-10tib-fs16g 
+Container rgeorge-mdtest-smoke does not exist, will create a new one.
+Successfully created container e90d93fd-51bd-4a08-a6a4-d0e9f6c6028e
+  Container UUID : e90d93fd-51bd-4a08-a6a4-d0e9f6c6028e
+  Container Label: rgeorge-mdtest-smoke                
+  Container Type : POSIX                               
+
+Container created successfully.
+Container properties:
+Properties for container rgeorge-mdtest-smoke
+Name                                             Value                               
+----                                             -----                               
+Highest Allocated OID (alloc_oid)                0                                   
+Checksum (cksum)                                 off                                 
+Checksum Chunk Size (cksum_size)                 32 KiB                              
+Compression (compression)                        off                                 
+Deduplication (dedup)                            off                                 
+Dedupe Threshold (dedup_threshold)               4.0 KiB                             
+EC Cell Size (ec_cell_sz)                        64 KiB                              
+Performance domain affinity level of EC (ec_pda) 1                                   
+Encryption (encryption)                          off                                 
+Global Version (global_version)                  3                                   
+Group (group)                                    users@                              
+Label (label)                                    rgeorge-mdtest-smoke                
+Layout Type (layout_type)                        POSIX (1)                           
+Layout Version (layout_version)                  1                                   
+Max Snapshot (max_snapshot)                      0                                   
+Object Version (obj_version)                     2                                   
+Owner (owner)                                    rgeorge@                            
+Performance domain level (perf_domain)           root (255)                          
+Redundancy Factor (rd_fac)                       rd_fac1                             
+Redundancy Level (rd_lvl)                        node (2)                            
+Performance domain affinity level of RP (rp_pda) 4294967295                          
+Server Checksumming (srv_cksum)                  off                                 
+Health (status)                                  HEALTHY                             
+Access Control List (acl)                        A::OWNER@:rwdtTaAo, A:G:GROUP@:rwtT 
+-- started at 07/07/2026 12:43:24 --
+
+mdtest-4.0.0 was launched with 48 total task(s) on 1 node(s)
+Command line used: /home/rgeorge/ior/install/bin/mdtest '-a' 'DFS' '-d' '/mdtest' '-i' '2' '-b' '4' '-I' '10' '-z' '4' '--dfs.pool' 'e2sar' '--dfs.cont' 'rgeorge-mdtest-smoke'
+Path                : /mdtest
+FS                  : 90.9 TiB   Used FS: 14.1%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+Nodemap: 111111111111111111111111111111111111111111111111
+48 tasks, 163680 files/directories
+
+SUMMARY rate: (of 2 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   Directory creation         211920.504     207066.400     209493.452       3432.370
+   Directory stat             279438.049     260203.562     269820.805      13600.837
+   Directory rename            94031.355      85650.860      89841.108       5925.905
+   Directory removal          105419.088     101583.445     103501.267       2712.209
+   File creation               24815.302      24707.004      24761.153         76.579
+   File stat                   12988.838      12951.339      12970.089         26.516
+   File read                   26499.227      26331.847      26415.537        118.355
+   File removal                 1980.342       1975.053       1977.698          3.740
+   Tree creation                3428.140       3049.818       3238.979        267.514
+   Tree removal                  470.806        465.324        468.065          3.877
+-- finished at 07/07/2026 12:47:12 --
+
+Remove container
+UUID                                 Label                
+----                                 -----                
+b7e9e607-0909-4456-ba0c-87443714631b fio-1tib-fs16g       
+299132a4-91a0-46ba-beae-4e96723b6242 fio-10tib-fs16g      
+e90d93fd-51bd-4a08-a6a4-d0e9f6c6028e rgeorge-mdtest-smoke 
+Successfully destroyed container rgeorge-mdtest-smoke
+Make container
+UUID                                 Label           
+----                                 -----           
+b7e9e607-0909-4456-ba0c-87443714631b fio-1tib-fs16g  
+299132a4-91a0-46ba-beae-4e96723b6242 fio-10tib-fs16g 
+Container rgeorge-mdtest-smoke does not exist, will create a new one.
+Successfully created container 7d997812-fa54-4f02-add5-639b03c29a64
+  Container UUID : 7d997812-fa54-4f02-add5-639b03c29a64
+  Container Label: rgeorge-mdtest-smoke                
+  Container Type : POSIX                               
+
+Container created successfully.
+Container properties:
+Properties for container rgeorge-mdtest-smoke
+Name                                             Value                               
+----                                             -----                               
+Highest Allocated OID (alloc_oid)                0                                   
+Checksum (cksum)                                 off                                 
+Checksum Chunk Size (cksum_size)                 32 KiB                              
+Compression (compression)                        off                                 
+Deduplication (dedup)                            off                                 
+Dedupe Threshold (dedup_threshold)               4.0 KiB                             
+EC Cell Size (ec_cell_sz)                        64 KiB                              
+Performance domain affinity level of EC (ec_pda) 1                                   
+Encryption (encryption)                          off                                 
+Global Version (global_version)                  3                                   
+Group (group)                                    users@                              
+Label (label)                                    rgeorge-mdtest-smoke                
+Layout Type (layout_type)                        POSIX (1)                           
+Layout Version (layout_version)                  1                                   
+Max Snapshot (max_snapshot)                      0                                   
+Object Version (obj_version)                     2                                   
+Owner (owner)                                    rgeorge@                            
+Performance domain level (perf_domain)           root (255)                          
+Redundancy Factor (rd_fac)                       rd_fac1                             
+Redundancy Level (rd_lvl)                        node (2)                            
+Performance domain affinity level of RP (rp_pda) 4294967295                          
+Server Checksumming (srv_cksum)                  off                                 
+Health (status)                                  HEALTHY                             
+Access Control List (acl)                        A::OWNER@:rwdtTaAo, A:G:GROUP@:rwtT 
+-- started at 07/07/2026 12:47:27 --
+
+mdtest-4.0.0 was launched with 48 total task(s) on 1 node(s)
+Command line used: /home/rgeorge/ior/install/bin/mdtest '-a' 'DFS' '-d' '/mdtest' '-i' '2' '-z' '4' '-I' '10' '-b' '4' '-u' '--dfs.pool' 'e2sar' '--dfs.cont' 'rgeorge-mdtest-smoke'
+Path                : /mdtest
+FS                  : 90.9 TiB   Used FS: 14.1%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+Nodemap: 111111111111111111111111111111111111111111111111
+48 tasks, 163680 files/directories
+
+SUMMARY rate: (of 2 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   Directory creation         335889.567     316783.930     326336.748      13509.726
+   Directory stat             330257.615     305103.329     317680.472      17786.767
+   Directory rename           147507.537     145977.058     146742.297       1082.212
+   Directory removal          122767.208     122589.574     122678.391        125.606
+   File creation               25573.357      24822.600      25197.978        530.866
+   File stat                   13382.172      13282.478      13332.325         70.495
+   File read                   26260.038      25950.393      26105.216        218.952
+   File removal                 2017.026       1997.817       2007.422         13.583
+   Tree creation                4204.019       3606.025       3905.022        422.846
+   Tree removal                 2273.910       2160.634       2217.272         80.098
+-- finished at 07/07/2026 12:51:08 --
+
+Remove container
+UUID                                 Label                
+----                                 -----                
+7d997812-fa54-4f02-add5-639b03c29a64 rgeorge-mdtest-smoke 
+b7e9e607-0909-4456-ba0c-87443714631b fio-1tib-fs16g       
+299132a4-91a0-46ba-beae-4e96723b6242 fio-10tib-fs16g      
+Successfully destroyed container rgeorge-mdtest-smoke
+Make container
+UUID                                 Label           
+----                                 -----           
+b7e9e607-0909-4456-ba0c-87443714631b fio-1tib-fs16g  
+299132a4-91a0-46ba-beae-4e96723b6242 fio-10tib-fs16g 
+Container rgeorge-mdtest-smoke does not exist, will create a new one.
+Successfully created container 3eabb4c0-d600-459c-9629-64246678804e
+  Container UUID : 3eabb4c0-d600-459c-9629-64246678804e
+  Container Label: rgeorge-mdtest-smoke                
+  Container Type : POSIX                               
+
+Container created successfully.
+Container properties:
+Properties for container rgeorge-mdtest-smoke
+Name                                             Value                               
+----                                             -----                               
+Highest Allocated OID (alloc_oid)                0                                   
+Checksum (cksum)                                 off                                 
+Checksum Chunk Size (cksum_size)                 32 KiB                              
+Compression (compression)                        off                                 
+Deduplication (dedup)                            off                                 
+Dedupe Threshold (dedup_threshold)               4.0 KiB                             
+EC Cell Size (ec_cell_sz)                        64 KiB                              
+Performance domain affinity level of EC (ec_pda) 1                                   
+Encryption (encryption)                          off                                 
+Global Version (global_version)                  3                                   
+Group (group)                                    users@                              
+Label (label)                                    rgeorge-mdtest-smoke                
+Layout Type (layout_type)                        POSIX (1)                           
+Layout Version (layout_version)                  1                                   
+Max Snapshot (max_snapshot)                      0                                   
+Object Version (obj_version)                     2                                   
+Owner (owner)                                    rgeorge@                            
+Performance domain level (perf_domain)           root (255)                          
+Redundancy Factor (rd_fac)                       rd_fac1                             
+Redundancy Level (rd_lvl)                        node (2)                            
+Performance domain affinity level of RP (rp_pda) 4294967295                          
+Server Checksumming (srv_cksum)                  off                                 
+Health (status)                                  HEALTHY                             
+Access Control List (acl)                        A::OWNER@:rwdtTaAo, A:G:GROUP@:rwtT 
+-- started at 07/07/2026 12:51:22 --
+
+mdtest-4.0.0 was launched with 48 total task(s) on 1 node(s)
+Command line used: /home/rgeorge/ior/install/bin/mdtest '-a' 'DFS' '-d' '/mdtest' '-i' '2' '-z' '4' '-I' '10' '-b' '4' '--dfs.pool' 'e2sar' '--dfs.cont' 'rgeorge-mdtest-smoke'
+Path                : /mdtest
+FS                  : 90.9 TiB   Used FS: 14.1%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+Nodemap: 111111111111111111111111111111111111111111111111
+48 tasks, 163680 files/directories
+
+SUMMARY rate: (of 2 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   Directory creation         234941.482     213697.949     224319.715      15021.446
+   Directory stat             281007.219     248459.326     264733.273      23014.836
+   Directory rename            90782.283      86434.830      88608.557       3074.114
+   Directory removal          102032.476     100907.160     101469.818        795.719
+   File creation               24863.315      24761.053      24812.184         72.310
+   File stat                   12690.614      12681.838      12686.226          6.205
+   File read                   26475.130      26136.105      26305.617        239.727
+   File removal                 1989.545       1982.452       1985.999          5.015
+   Tree creation                3507.580       3093.078       3300.329        293.097
+   Tree removal                  459.985        449.688        454.837          7.281
+-- finished at 07/07/2026 12:55:11 --
+
+Remove container
+UUID                                 Label                
+----                                 -----                
+b7e9e607-0909-4456-ba0c-87443714631b fio-1tib-fs16g       
+3eabb4c0-d600-459c-9629-64246678804e rgeorge-mdtest-smoke 
+299132a4-91a0-46ba-beae-4e96723b6242 fio-10tib-fs16g      
+Successfully destroyed container rgeorge-mdtest-smoke
+End of mdtest cases
+UUID                                 Label           
+----                                 -----           
+b7e9e607-0909-4456-ba0c-87443714631b fio-1tib-fs16g  
+299132a4-91a0-46ba-beae-4e96723b6242 fio-10tib-fs16g 
+Completed script in 960 seconds
