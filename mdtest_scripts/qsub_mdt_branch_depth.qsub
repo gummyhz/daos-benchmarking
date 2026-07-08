@@ -13,7 +13,7 @@ module use /soft/modulefiles/ || { echo "Failed to use modulefiles"; }
 module load daos || { echo "Failed to load DAOS module"; }
 
 # Variables
-POOL_NAME=e2sar2
+POOL_NAME=e2sar
 NNODES=`wc -l < $PBS_NODEFILE`
 CONTAINER_NAME="${USER}-mdtest-smoke"
 MOUNT_POINT="/tmp/${POOL_NAME}/${CONTAINER_NAME}"
