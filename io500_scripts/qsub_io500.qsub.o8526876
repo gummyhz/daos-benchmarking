@@ -1,0 +1,127 @@
+Pool 33501c2e-2721-4811-adbb-118f78785224, ntarget=4032, disabled=48, leader=236, version=100, state=Degraded
+Pool health info:
+- Rebuild done, 0 objs, 0 recs
+Pool space info:
+- Target(VOS) count:3984
+- Storage tier 0 (SCM):
+  Total size: 3.0 TB
+  Free: 2.6 TB, min:661 MB, max:661 MB, mean:661 MB
+- Storage tier 1 (NVMe):
+  Total size: 96 TB
+  Free: 96 TB, min:24 GB, max:24 GB, mean:24 GB
+Container rgeorge-io500 does not exist, will create a new one.
+Successfully created container 77c44be4-c5fa-4920-8b19-47749913066c
+  Container UUID : 77c44be4-c5fa-4920-8b19-47749913066c
+  Container Label: rgeorge-io500                       
+  Container Type : POSIX                               
+
+Get container properties:
+Properties for container rgeorge-io500
+Name                                             Value                               
+----                                             -----                               
+Highest Allocated OID (alloc_oid)                0                                   
+Checksum (cksum)                                 off                                 
+Checksum Chunk Size (cksum_size)                 32 KiB                              
+Compression (compression)                        off                                 
+Deduplication (dedup)                            off                                 
+Dedupe Threshold (dedup_threshold)               4.0 KiB                             
+EC Cell Size (ec_cell_sz)                        64 KiB                              
+Performance domain affinity level of EC (ec_pda) 1                                   
+Encryption (encryption)                          off                                 
+Global Version (global_version)                  3                                   
+Group (group)                                    users@                              
+Label (label)                                    rgeorge-io500                       
+Layout Type (layout_type)                        POSIX (1)                           
+Layout Version (layout_version)                  1                                   
+Max Snapshot (max_snapshot)                      0                                   
+Object Version (obj_version)                     2                                   
+Owner (owner)                                    rgeorge@                            
+Performance domain level (perf_domain)           root (255)                          
+Redundancy Factor (rd_fac)                       rd_fac1                             
+Redundancy Level (rd_lvl)                        node (2)                            
+Performance domain affinity level of RP (rp_pda) 4294967295                          
+Server Checksumming (srv_cksum)                  off                                 
+Health (status)                                  HEALTHY                             
+Access Control List (acl)                        A::OWNER@:rwdtTaAo, A:G:GROUP@:rwtT 
+dfuse on /tmp/e2sar/rgeorge-io500 type fuse.daos (rw,nosuid,nodev,noatime,user_id=40816,group_id=100,default_permissions)
+IO500 version io500-isc24_v3-13 (standard)
+[RESULT]       ior-easy-write       30.439275 GiB/s : time 315.560 seconds
+ERROR INVALID (src/main.c:437) Runtime of phase (167.160228) is below stonewall time. This shouldn't happen!
+ERROR INVALID (src/main.c:443) Runtime is smaller than expected minimum runtime
+[RESULT]    mdtest-easy-write       72.246115 kIOPS : time 167.160 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.002 seconds
+[RESULT]       ior-hard-write        1.197974 GiB/s : time 300.054 seconds
+[RESULT]    mdtest-hard-write       30.150345 kIOPS : time 302.431 seconds
+[RESULT]                 find      105.632759 kIOPS : time 199.374 seconds
+[RESULT]        ior-easy-read       26.266998 GiB/s : time 365.646 seconds
+[RESULT]     mdtest-easy-stat      112.521844 kIOPS : time 107.735 seconds
+[RESULT]        ior-hard-read        1.756237 GiB/s : time 204.708 seconds
+[RESULT]     mdtest-hard-stat      105.986744 kIOPS : time 86.466 seconds
+[RESULT]   mdtest-easy-delete       31.673234 kIOPS : time 381.215 seconds
+[RESULT]     mdtest-hard-read       96.708500 kIOPS : time 94.654 seconds
+[RESULT]   mdtest-hard-delete       32.308200 kIOPS : time 288.165 seconds
+[SCORE ] Bandwidth 6.404258 GiB/s : IOPS 63.713719 kiops : TOTAL 20.199977 [INVALID]
+
+The result files are stored in the directory: /home/rgeorge/io500_8526876_1-n
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+Warning: please create a 'system-information.txt' description by
+copying the information from https://vi4io.org/io500-info-creator/
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+'/home/rgeorge/io500/io500.sh' -> '/home/rgeorge/io500_8526876_1-n/io500/io500.sh'
+'/home/rgeorge/myconfig.ini' -> '/home/rgeorge/io500_8526876_1-n/io500/myconfig.ini'
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Created result tarball /home/rgeorge/io500_8526876_1-n/io500-x4217c0s5b0n0-io500.tgz
+Successfully destroyed container rgeorge-io500
+Completed script in 2824 seconds
